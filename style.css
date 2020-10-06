@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap");
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  background: rgb(131, 58, 180);
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#833ab4",endColorstr="#fcb045",GradientType=1);
+}
+
+/* ---- styling starts here-----*/
+
+#nav{
+  border: 0;
+}
+
+a {
+  color: white;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-decoration: none;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 20px 5px;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  
+}
+
+a:hover {
+  background: rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+  color: #d6dbd2;
+}
+
+img {
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+.wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 50px;
+  padding-bottom: 10px;
+  // background: #1111;
+}
+
+section,
+footer {
+  color: white;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 20px 5px;
+  margin-bottom: 20px;
+}
+p {
+  padding: 20px;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 300;
+}
+
+input {
+  padding: 10px;
+  border: 0;
+  margin: 0 10px;
+}
+
+.submit {
+  color: #003049;
+}
+
+h1 a {
+  font-family: "Quicksand";
+  font-weight: 500;
+}
+
+footer {
+  margin-bottom: 0;
+  margin-top: 40px;
+}
+
+.signup-section form {
+  display: flex;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.signup-section form .submit {
+  background: grey;
+  color: white;
+  flex-basis: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.signup-section form .txt {
+  flex: 1;
+}
+
+
+.image-block{
+/*   padding-left: 0;
+  padding-right: 0; */
+  padding: 0;
+}
+
+/*basic styling ends-----*/
+
+/*---- flex-items ----*/
+
+.flex-nav ul {
+  display: flex;
+  border: 1px solid black;
+  padding: 0;
+}
+
+/* ERRRORR 404 - using .flex-nav ul li does not select list elements*/
+
+.list-item {
+  flex: 3;
+}
+
+.social {
+  flex: 1;
+}
+
+#nav {
+  transition: all 0.5s ease-in-out;
+}
+
+/* -------------------------media querrrrry-----*/
+
+@media all and (max-width: 1000px) {
+  .flex-nav ul {
+    flex-wrap: wrap;
+  }
+
+  .flex-nav li {
+    flex: 1 1 50%;
+  }
+
+  .flex-nav .social {
+    flex: 1 1 25%;
+  }
+
+  .signup-section form {
+    padding-left: 0px;
+    padding-right: 10px;
+  }
+}
+@media all and (max-width: 500px) {
+  .flex-nav li {
+    flex-basis: 100%;
+  }
+
+  .signup-section form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 0px;
+  }
+
+  .signup-section form .submit {
+    background-color: grey;
+    color: white;
+    margin: 5px 25px;
+    text-align: center;
+    flex-basis: auto;
+  }
+
+  .signup-section form .txt {
+    // background: #000;
+    margin: 5px 25px;
+    padding: 10px;
+    border: 2px solid white;
+  }
+
+  
+}
+
+/* ----------end of nav styling----------------//
